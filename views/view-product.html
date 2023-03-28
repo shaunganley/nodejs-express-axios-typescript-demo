@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>{{ product.name }}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  </head>
+  <body>
+    <header class="bg-dark text-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>{{ product.name }}</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="container mt-4">
+      <section id="product" class="mt-4">
+        {% if product %}
+          <h2>Description</h2>
+          {{ product.description }}
+
+          <h2>Price</h2>
+          {{ product.price }}
+        {% else %}
+          Could not find product. 
+        {% endif %}
+        </section>
+        </main>
+  </body>
+</html>
